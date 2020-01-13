@@ -60,3 +60,7 @@ footer address{
 footer address a{
     display: block;
 }
+hr{
+    border: none;
+    border-top: 2px dashed red;
+}
