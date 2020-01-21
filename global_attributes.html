@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Elements</title>
+    <style>
+        .section{
+            width: 100px;
+            color: red;
+            background: blue;
+        }
+        #section{
+            height: 200px;
+            position: relative;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="section">클래스 섹션</div><!--중복 가능-->
+    <div class="section">클래스 섹션</div>
+    <div class="section">클래스 섹션</div>
+    <div class="section">클래스 섹션</div>
+    <div class="section">클래스 섹션</div>
+    <div id="section">아이디 섹션</div><!--중복 불가능-->
+
+    <script>
+        const section = document.querySelector('.section');//class 값 검색
+        const sectionId = document.getElementById('section');//id 값 검색
+    </script>
+
+    <h1 style="color:red; background:blue;">스타일</h1>
+    <h2 title="이 부분은 제목2입니다!">제목2</h2>
+    <a href="https://google.com" title="GOOGLE.com">Google</a>
+    <div title="DIV 태그입니다.">DIV</div>
+
+    <div id="me" data-my-name="Yujinss" data-my-age="851">Yujinss</div>
+
+    <script>
+        const me = document.getElementById('me');
+        console.log(me.dataset.myName);
+        console.log(me.dataset.myAge);
+    </script>
+
+    <div draggable="true">The element to drag.</div>
+    
+    <form id="hidden-form" action="/form-action" >
+        <!--숨겨진 양식들!-->
+        <input type="text" name="id" value="Yujinss" hidden>
+    </form>
+    <button form="hidden-form" type="submit">전송</button><!--숨겨진 양식들을 전송-->
+
+    <input type="text" value="1(2)" tabindex="2">
+    <input type="text" value="2">
+    <input type="text" value="3(1)" tabindex="1">
+    <input type="text" value="4">
+    <input type="text" value="5(3)" tabindex="3">
+    <br><br>
+    
+    <input type="text" value="1">
+    <input type="text" value="2">
+    <div tabindex="0">2.5</div><!--비대화형 콘텐츠 탭 이동 지정-->
+    <input type="text" value="3">
+    <input type="text" value="4" tabindex="-1"><!--탭 순서 제외-->
+    <input type="text" value="5">
+
+    <h1>
+        &nbsp;<!--띄어쓰기 특수기호-->
+        &lt;div&gt;&lt;/div&gt;<!--꺽쇄 특수기호-->
+    </h1>
+</body>
+</html>
